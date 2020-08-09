@@ -9,7 +9,7 @@
       <h1> BLOGS LIST</h1>
       {% for post in posts %}
       <div class="">
-        <h2><a href="#">{{post.title}}</a></h2>
+        <h2><a href="{% url 'detail' post.pk %}">{{post.title}}</a></h2>
         <p>published date:{{post.published_date}}</p>
         <p>{{post.text|linebreaksbr}}</p>
       </div>
