@@ -3,10 +3,14 @@
 
     {% if post.published_date %}
       <div class="post">
-        <h2>{{post.title}}</h2>
         <p class="publish">Published:{{post.published_date}}</p>
+          <a href="{% url 'edit_post' post.pk %}"><i class="fas fa-pen-fancy fa-2x fa-spin"></i></a>
+        <h2>{{post.title}}</h2>
+
         <p>{{post.text|linebreaksbr}}</p>
     {% endif %}
+
       </div>
+
 
   {% endblock %}
