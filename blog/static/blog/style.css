@@ -37,3 +37,7 @@ h1,h2,h3,h4 {
 .form-post .btn-primary{
   float:right;
 }
+
+.top-menu{
+  float: right;
+}
