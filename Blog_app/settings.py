@@ -26,6 +26,7 @@ SECRET_KEY = '6(ew9-i8!sqvzc=oo^zh%twf+-z2vueqlhvp7fi9_4xoklu-+='
 DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_REDIRECT_URL='post_list'
 
 
 # Application definition
