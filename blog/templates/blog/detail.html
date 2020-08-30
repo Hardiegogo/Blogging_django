@@ -1,4 +1,5 @@
 {% extends 'blog/base.html' %}
+{% load markdownify %}
 {% block title %}
 {{post.title}}
 {% endblock %}
@@ -13,7 +14,7 @@
           {% endif %}
         <h2>{{post.title}}</h2>
 
-        <p>{{post.text|linebreaksbr}}</p>
+        <p>{{post.text|markdown|safe|linebreaksbr }}</p>
         {% if not post.published_date %}
 
         <a href="{% url "post_publish" post.pk %}"><button type="button" name="button">Publish</button></a>
@@ -28,7 +29,7 @@
                 <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
                 <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
             {% endif %}
-            <p>{{comment.text}}</p>
+            <p>{{comment.text|markdown|safe|linebreaksbr}}</p>
           {% empty %}
             <p>No comments yet..</p>
 
