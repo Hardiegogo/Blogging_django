@@ -15,5 +15,6 @@ urlpatterns = [
     path('post/<int:pk>/addComment',views.add_comment,name='add_comment'),
     path('comment/<int:pk>/approve/', views.comment_approve, name='comment_approve'),
     path('comment/<int:pk>/remove/', views.comment_remove, name='comment_remove'),
+    path('signup/',views.signup,name='signup')
 
 ]
